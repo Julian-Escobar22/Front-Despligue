@@ -1,0 +1,36 @@
+/* src/App.css */
+
+.App {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.App-header {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: black;
+  padding: 50px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.App-header .title {
+  font-size: 2.5em; /* Disminuir el tamaño de la fuente del título */
+}
+
+.App-header .subtitle {
+  font-size: 1.5em; /* Disminuir el tamaño de la fuente del subtítulo */
+}
+
+.App-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 20px;
+}

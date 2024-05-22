@@ -1,0 +1,46 @@
+/* src/components/PortfolioList.css */
+.portfolio-list {
+  font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto */
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.portfolio-list h2 {
+  font-size: 2em;
+  color: #8B4513;
+}
+
+.portfolio-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-list li {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-list h3 {
+  font-size: 1.5em;
+  color: #8B4513;
+}
+
+.portfolio-list p {
+  font-size: 1.2em;
+  color: black;
+}
+
+.portfolio-list a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.portfolio-list a:hover {
+  text-decoration: underline;
+}
