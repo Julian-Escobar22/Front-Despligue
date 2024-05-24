@@ -20,7 +20,7 @@ const PortfolioList = () => {
     <div className="portfolio-list">
       <h2>Portfolios</h2>
       <ul>
-        {portfolios.map((portfolio, index) => (
+        {portfolios && portfolios.map((portfolio, index) => (
           <PortfolioItem key={portfolio._id} portfolio={portfolio} index={index} />
         ))}
       </ul>
