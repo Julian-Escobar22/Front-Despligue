@@ -55,17 +55,15 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      - name: Login to Azure
+      - name: Login to Azure using Managed Identity
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7BA152446CC048AAA1F85785C549962B }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_04D96AA1A6CB43E1BED6523CE71935A2 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3E34E13528374F218286DAB17C9DFCA5 }}
+          managed-identity-client-id: ${{ secrets.MANAGED_IDENTITY_CLIENT_ID }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
-        with: 
+        with:
           app-name: 'portfoliosOnlinePORTAYA'
           slot-name: 'Production'
           package: .
