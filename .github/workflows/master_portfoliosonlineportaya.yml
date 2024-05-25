@@ -59,22 +59,15 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_04D96AA1A6CB43E1BED6523CE71935A2 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3E34E13528374F218286DAB17C9DFCA5 }}
 
-      - name: 'Deploy to Azure Web App'
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'portfoliosOnlinePORTAYA'
-          slot-name: 'Production'
-          package: .
-
       - name: Configure App Settings
+        id: configure-app-settings
         uses: azure/appservice-settings@v2
         with:
           app-name: 'portfoliosOnlinePORTAYA'
           app-settings-json: '{"SCM_DO_BUILD_DURING_DEPLOYMENT": "true"}'
 
-      - name: 'Deploy to Azure Web App'
-        id: deploy-to-webapp
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp-step
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'portfoliosOnlinePORTAYA'
