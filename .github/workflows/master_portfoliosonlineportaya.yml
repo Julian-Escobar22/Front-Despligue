@@ -73,8 +73,10 @@ jobs:
           app-name: 'portfoliosOnlinePORTAYA'
           app-settings-json: '{"SCM_DO_BUILD_DURING_DEPLOYMENT": "true"}'
 
-      - name: Restart Azure Web App
-        uses: azure/appservice-actions@v2
+      - name: 'Deploy to Azure Web App'
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
         with:
           app-name: 'portfoliosOnlinePORTAYA'
-          action: 'Restart'
+          slot-name: 'Production'
+          package: .
